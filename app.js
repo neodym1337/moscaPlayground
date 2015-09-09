@@ -12,6 +12,7 @@ var credentials = {
 
 //here we start mosca
 console.log('Starting mosca');
+
 var server = new mosca.Server(settings);
 server.on('ready', setup);
 
