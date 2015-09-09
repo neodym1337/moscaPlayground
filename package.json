@@ -1,0 +1,14 @@
+{
+  "name": "STS",
+  "version": "0.0.16",
+  "private": true,
+  "dependencies": {
+      "mosca": "*",
+      "later": "*",
+      "http": "*",
+      "mqtt": "*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
