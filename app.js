@@ -11,16 +11,16 @@ var credentials = {
 };
 
 //here we start mosca
+console.log('Starting mosca');
 var server = new mosca.Server(settings);
 server.on('ready', setup);
 
 // fired when the mqtt server is ready
 function setup() {
-    console.log('Mosca server is up and running');
     server.authenticate = authenticate;
     server.authorizePublish = authorizePublish;
     server.authorizeSubscribe = authorizeSubscribe;
-    console.log('setup completed');
+    console.log('Mosca server is up and running');
 }
 
 // fired whena  client is connected
