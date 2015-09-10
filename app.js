@@ -75,13 +75,13 @@ var authenticate = function(client, username, password, callback) {
 }
 
 var authorizePublish = function(client, topic, payload, callback) {
-    var authorized = publisher[client.user].channels.indexOf(topic) > -1
+    var authorized = credentials[client.user].channels.indexOf(topic) > -1
     console.log(client.user + " authorized publishing to channel " + topic + " - " + authorized);
     callback(null, authorized);
 }
 
 var authorizeSubscribe = function(client, topic, callback) {
-    var authorized = subscribers[client.user].channels.indexOf(topic) > -1
+    var authorized = credentials[client.user].channels.indexOf(topic) > -1
     console.log(client.user + " authorized subscribed to channel " + topic + " - " + authorized);
     callback(null, authorized);
 }
