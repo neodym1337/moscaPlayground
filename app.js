@@ -10,6 +10,7 @@ var credentials = {
     'playground': {password: "edge", channels: ["netlight"]}
 };
 
+
 //here we start mosca
 console.log('Starting mosca');
 
